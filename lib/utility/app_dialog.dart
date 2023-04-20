@@ -25,11 +25,12 @@ class AppDialog {
       {required String title,
       String? subTitle,
       Widget? firstAction,
-      Widget? secondAction}) {
+      Widget? secondAction,
+      String? pathImage}) {
     Get.dialog(
         AlertDialog(
-          icon: const WidgetImage(
-            size: 100,
+          icon: WidgetImage(
+            size: 100,path: pathImage,
           ),
           title: ListTile(
             title: Row(
