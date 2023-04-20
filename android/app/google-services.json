@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "976231061682",
+    "project_id": "ungreview-43ca3",
+    "storage_bucket": "ungreview-43ca3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:976231061682:android:5a11a5980461eff2eb51ab",
+        "android_client_info": {
+          "package_name": "com.masterung.ungreview"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "976231061682-h80gn8dvcecf7n891pscbdnpbnp092gs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSrPLHs_5T4TETNxCsvlvI13kTnrIJJxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "976231061682-h80gn8dvcecf7n891pscbdnpbnp092gs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
