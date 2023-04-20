@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ungreview/states/loginpage.dart';
 import 'package:ungreview/states/main_home.dart';
 import 'package:ungreview/utility/app_service.dart';
 
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: const MainHome(),
+      home: const LoginPage(),
       theme: ThemeData(
         useMaterial3: true,
         // colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.deepOrange),
