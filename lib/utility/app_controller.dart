@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:get/get.dart';
+import 'package:ungreview/model/post_model.dart';
 import 'package:ungreview/model/user_model.dart';
 
 class AppController extends GetxController {
@@ -8,4 +9,9 @@ class AppController extends GetxController {
   RxString uidLogin = ''.obs;
   RxList<UserModel> currentUserModels = <UserModel>[].obs;
   RxList<File> files = <File>[].obs;
+  RxString urlImage = ''.obs;
+  RxList<PostModel> postPostModels = <PostModel>[].obs;
+
+  RxList<PostModel> discoverPostModels = <PostModel>[].obs;
+  RxList<UserModel> discoverUserModels = <UserModel>[].obs;
 }

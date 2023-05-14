@@ -6,11 +6,13 @@ class UserModel {
   final String email;
   final String password;
   final String uid;
+  final String urlAvatar;
   UserModel({
     required this.displayName,
     required this.email,
     required this.password,
     required this.uid,
+    required this.urlAvatar,
   });
 
   Map<String, dynamic> toMap() {
@@ -19,6 +21,7 @@ class UserModel {
       'email': email,
       'password': password,
       'uid': uid,
+      'urlAvatar': urlAvatar,
     };
   }
 
@@ -28,11 +31,11 @@ class UserModel {
       email: (map['email'] ?? '') as String,
       password: (map['password'] ?? '') as String,
       uid: (map['uid'] ?? '') as String,
+      urlAvatar: (map['urlAvatar'] ?? '') as String,
     );
   }
 
   String toJson() => json.encode(toMap());
 
-  factory UserModel.fromJson(String source) =>
-      UserModel.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory UserModel.fromJson(String source) => UserModel.fromMap(json.decode(source) as Map<String, dynamic>);
 }

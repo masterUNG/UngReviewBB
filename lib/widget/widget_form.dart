@@ -8,12 +8,14 @@ class WidgetForm extends StatelessWidget {
     required this.changeFunc,
     this.textInputType,
     this.obsecu,
+    this.suffixWidget,
   }) : super(key: key);
 
   final String label;
   final Function(String) changeFunc;
   final TextInputType? textInputType;
   final bool? obsecu;
+  final Widget? suffixWidget;
 
   @override
   Widget build(BuildContext context) {
@@ -21,13 +23,16 @@ class WidgetForm extends StatelessWidget {
       width: 250,
       height: 40,
       margin: const EdgeInsets.only(top: 16),
-      child: TextFormField(obscureText: obsecu ?? false,
+      child: TextFormField(
+        obscureText: obsecu ?? false,
         keyboardType: textInputType,
         onChanged: changeFunc,
         decoration: InputDecoration(
-          border: OutlineInputBorder(),
+          contentPadding:
+              const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+          border: const OutlineInputBorder(), suffixIcon: suffixWidget,
           labelText: label,
-          // contentPadding: const EdgeInsets.symmetric(vertical: 4),
+          
         ),
       ),
     );

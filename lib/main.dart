@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:ungreview/states/loginpage.dart';
 import 'package:ungreview/states/main_home.dart';
@@ -8,6 +9,9 @@ import 'package:ungreview/utility/app_service.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
+
   await Firebase.initializeApp().then((value) {
     FirebaseAuth.instance.authStateChanges().listen((event) {
       if (event == null) {
@@ -15,7 +19,9 @@ Future<void> main() async {
         runApp(const MyApp());
       } else {
         // login
-        AppService().findCurrentUserModel().then((value) => runApp(const MyApp()));
+        AppService()
+            .findCurrentUserModel()
+            .then((value) => runApp(const MyApp()));
       }
     });
   });
@@ -31,6 +37,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         // colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.deepOrange),
+        textTheme: TextTheme(),
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
